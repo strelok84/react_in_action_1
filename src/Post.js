@@ -14,9 +14,10 @@ class Post extends Component {
 
 }
 
-Post.PropTypes = {
+Post.propTypes = {
     user: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,
     id: PropTypes.number.isRequired
 }
 
+export default Post;

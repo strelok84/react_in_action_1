@@ -18,10 +18,10 @@ reportWebVitals(); */
 
 import React, { Component } from "react";
 import { render } from "react-dom";
-import PropTypes from "prop-types";
+import Post from './Post';
 
 const node = document.getElementById("root");
 
-const root = React.createElement('div', {}, React.createElement('h1', {}, "Hello world!"));
+const root = React.createElement(Post,{id:1,content:" said this is post",user:"mark"});
 
 render(root, node);
