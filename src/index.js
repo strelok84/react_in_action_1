@@ -18,10 +18,22 @@ reportWebVitals(); */
 
 import React, { Component } from "react";
 import { render } from "react-dom";
-import Post from './Post';
+import Post from './components/Post';
+import Comment from "./components/Comment";
+import CreateComment from "./components/CreateComment";
 
 const node = document.getElementById("root");
 
-const root = React.createElement(Post,{id:1,content:" said this is post",user:"mark"});
+const root = React.createElement(Post, {
+  id: 1, content: " said this is post",
+  user: "mark"
+}, React.createElement(Comment, {
+  id: 2,
+  user: "bob",
+  content: " commented: wow! how cool!"
+}),
+React.createElement(CreateComment)
+
+);
 
 render(root, node);
